@@ -19,6 +19,14 @@ public class WordManipulationRest {
     @Autowired
     private WordManipulationService srv;
 
+    public WordManipulationService getSrv() {
+        return srv;
+    }
+
+    public void setSrv(WordManipulationService srv) {
+        this.srv = srv;
+    }
+
     @PostMapping("/reverseWords")
     public List<ManipulatedString> reverseString(HttpServletRequest request, @RequestBody ManipulatedString strToBeReversed){
             System.out.println("Processing a POST in /reverseWords");
